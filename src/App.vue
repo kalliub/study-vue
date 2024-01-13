@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import MarkdownEditor from './components/Tutorial/Practical/MarkdownEditor.vue'
+import FetchingData from './components/Tutorial/Practical/FetchingData.vue'
 </script>
 
 <template>
@@ -9,7 +9,8 @@ import MarkdownEditor from './components/Tutorial/Practical/MarkdownEditor.vue'
     <!-- <FormBindings /> -->
     <!-- <SimpleComponent /> -->
 
-    <MarkdownEditor />
+    <!-- <MarkdownEditor /> -->
+    <FetchingData />
   </div>
 </template>
 
