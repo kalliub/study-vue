@@ -3,7 +3,9 @@ import { ref, watchEffect } from 'vue'
 import type { GithubRepo } from '@/types/FetchingData'
 
 const API_URL = `https://api.github.com/users/kalliub/repos?sort=created&direction=desc`
-const repos = ref<GithubRepo[] | null>(null)
+const ARTIFICIAL_FETCH_DELAY = 1000
+
+const repos = ref<GithubRepo[]>([])
 const loading = ref(true)
 
 const filterRepos = (reposList: GithubRepo[]) => {
@@ -19,7 +21,7 @@ watchEffect(async () => {
       setTimeout(() => {
         repos.value = filterRepos(res)
         loading.value = false
-      }, 1000)
+      }, ARTIFICIAL_FETCH_DELAY)
     })
 })
 </script>
@@ -28,9 +30,7 @@ watchEffect(async () => {
   <h1 v-if="loading">Loading...</h1>
 
   <div v-else>
-    <h1>Some of my GitHub Repos</h1>
-
-    <div v-if="repos" style="display: flex">
+    <div style="display: flex">
       <div class="profile-data">
         <img :src="repos[0].owner.avatar_url" alt="githubpic" class="avatar-pic" />
         <div class="">
@@ -49,17 +49,20 @@ watchEffect(async () => {
       </div>
     </div>
 
-    <template v-for="repo in repos" v-bind:key="repo">
-      <ul>
-        <li>
-          <div class="list-item">
-            <a :href="repo.html_url" target="_blank">{{ repo.name }}</a>
-            <pre class="repo-language">{{ repo.language }}</pre>
-            <span class="repo-description">{{ repo.description }}</span>
-          </div>
-        </li>
-      </ul>
-    </template>
+    <div style="margin: 8px">
+      <h1>Some of my GitHub Repos</h1>
+      <template v-for="repo in repos" v-bind:key="repo">
+        <ul>
+          <li>
+            <div class="list-item">
+              <a :href="repo.html_url" target="_blank">{{ repo.name }}</a>
+              <pre class="repo-language">{{ repo.language }}</pre>
+              <span class="repo-description">{{ repo.description }}</span>
+            </div>
+          </li>
+        </ul>
+      </template>
+    </div>
   </div>
 </template>
 
