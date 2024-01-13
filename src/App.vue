@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import AttributesBindings from './components/AttributesBindings.vue'
+import ConditionalsAndLoops from './components/ConditionalsAndLoops.vue';
 
 const message = ref('Hello World!')
 </script>
@@ -9,7 +9,8 @@ const message = ref('Hello World!')
   <h1>{{message}}</h1>
 
   <div class="page-body">
-      <AttributesBindings />
+      <!-- <AttributesBindings /> -->
+      <ConditionalsAndLoops />
   </div>
 
 </template>
@@ -19,6 +20,6 @@ const message = ref('Hello World!')
   display: flex;
   flex-direction: column;
   gap: 32px;
-  max-width: fit-content;
+  max-width: 200px;
 }
 </style>
