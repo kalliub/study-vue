@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import FetchingData from './components/Tutorial/Practical/FetchingData.vue'
+import GridSortFilter from './components/Tutorial/Practical/GridSortFilter/GridSortFilter.vue'
 </script>
 
 <template>
@@ -10,7 +10,8 @@ import FetchingData from './components/Tutorial/Practical/FetchingData.vue'
     <!-- <SimpleComponent /> -->
 
     <!-- <MarkdownEditor /> -->
-    <FetchingData />
+    <!-- <FetchingData /> -->
+    <GridSortFilter />
   </div>
 </template>
 
