@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import ConditionalsAndLoops from './components/ConditionalsAndLoops.vue';
+import FormBindings from './components/FormBindings.vue';
 
 const message = ref('Hello World!')
 </script>
@@ -10,7 +10,8 @@ const message = ref('Hello World!')
 
   <div class="page-body">
       <!-- <AttributesBindings /> -->
-      <ConditionalsAndLoops />
+      <!-- <ConditionalsAndLoops /> -->
+      <FormBindings />
   </div>
 
 </template>
