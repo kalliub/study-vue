@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Basic, Practical } from './components/Tutorial/index'
+import { Basic, Practical, GUIs } from './components/Tutorial/index'
 </script>
 
 <template>
@@ -12,6 +12,8 @@ import { Basic, Practical } from './components/Tutorial/index'
     <!-- <Practical.MarkdownEditor /> -->
     <!-- <Practical.FetchingData /> -->
     <!-- <Practical.GridSortFilter /> -->
+
+    <!-- <GUIs.Counter /> -->
   </div>
 </template>
 
