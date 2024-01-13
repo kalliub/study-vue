@@ -8,6 +8,7 @@ import FetchingData from './Practical/FetchingData.vue'
 import GridSortFilter from './Practical/GridSortFilter/GridSortFilter.vue'
 
 import Counter from './GUIs/Counter.vue'
+import TemperatureConverter from './GUIs/TemperatureConverter.vue'
 
 export const Basic = {
     AttributesBindings,
@@ -24,4 +25,5 @@ export const Practical = {
 
 export const GUIs = {
   Counter,
+  TemperatureConverter
 }

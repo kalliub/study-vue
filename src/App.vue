@@ -14,6 +14,7 @@ import { Basic, Practical, GUIs } from './components/Tutorial/index'
     <!-- <Practical.GridSortFilter /> -->
 
     <!-- <GUIs.Counter /> -->
+    <GUIs.TemperatureConverter />
   </div>
 </template>
 
