@@ -1,17 +1,17 @@
 <script setup lang="ts">
-import GridSortFilter from './components/Tutorial/Practical/GridSortFilter/GridSortFilter.vue'
+import { Basic, Practical } from './components/Tutorial/index'
 </script>
 
 <template>
   <div class="page-body">
-    <!-- <AttributesBindings /> -->
-    <!-- <ConditionalsAndLoops /> -->
-    <!-- <FormBindings /> -->
-    <!-- <SimpleComponent /> -->
+    <!-- <Basic.AttributesBindings /> -->
+    <!-- <Basic.ConditionalsAndLoops /> -->
+    <!-- <Basic.FormBindings /> -->
+    <!-- <Basic.SimpleComponent /> -->
 
-    <!-- <MarkdownEditor /> -->
-    <!-- <FetchingData /> -->
-    <GridSortFilter />
+    <!-- <Practical.MarkdownEditor /> -->
+    <!-- <Practical.FetchingData /> -->
+    <!-- <Practical.GridSortFilter /> -->
   </div>
 </template>
 
