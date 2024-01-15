@@ -9,6 +9,7 @@ import GridSortFilter from './Practical/GridSortFilter/GridSortFilter.vue'
 
 import Counter from './GUIs/Counter.vue'
 import TemperatureConverter from './GUIs/TemperatureConverter.vue'
+import Timer from './GUIs/Timer.vue'
 
 export const Basic = {
     AttributesBindings,
@@ -25,5 +26,6 @@ export const Practical = {
 
 export const GUIs = {
   Counter,
-  TemperatureConverter
+  TemperatureConverter,
+  Timer,
 }
