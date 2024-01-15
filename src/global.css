@@ -2,3 +2,7 @@
   font-family: 'Inter', sans-serif;
   line-height: normal;
 }
+
+pre, code {
+  font-family: monospace;
+}

@@ -10,7 +10,8 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      component: HomeVue
+      component: HomeVue,
+      name: 'Home'
     },
 
     ...basicRoutes,
