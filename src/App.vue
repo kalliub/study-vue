@@ -1,21 +1,18 @@
 <script setup lang="ts">
-import { Basic, Practical, GUIs } from './components/Tutorial/index'
+import { computed } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const currentPath = computed(() => route.path)
 </script>
 
 <template>
-  <div class="page-body">
-    <!-- <Basic.AttributesBindings /> -->
-    <!-- <Basic.ConditionalsAndLoops /> -->
-    <!-- <Basic.FormBindings /> -->
-    <!-- <Basic.SimpleComponent /> -->
+  <div id="app" class="page-body">
+    <div v-if="currentPath !== '/'">
+      <p><RouterLink to="/">Home</RouterLink></p>
+    </div>
 
-    <!-- <Practical.MarkdownEditor /> -->
-    <!-- <Practical.FetchingData /> -->
-    <!-- <Practical.GridSortFilter /> -->
-
-    <!-- <GUIs.Counter /> -->
-    <!-- <GUIs.TemperatureConverter /> -->
-    <GUIs.Timer />
+    <RouterView />
   </div>
 </template>
 
