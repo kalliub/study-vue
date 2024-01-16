@@ -1,27 +1,28 @@
-import { Basic } from "@/components/Tutorial";
 import type { RouteRecordRaw } from "vue-router";
 
 const prefix = 'basic'
 
+const LazyImport = (file: string) => () => import(`@/components/Tutorial/Basic/${file}.vue`)
+
 export default [
   {
     path: 'attributes-bindings',
-    component: Basic.AttributesBindings,
+    component: LazyImport('AttributesBindings'),
     name: 'Attributes Bindings'
   },
   {
     path: 'conditionals-and-loops',
-    component: Basic.ConditionalsAndLoops,
+    component: LazyImport('ConditionalsAndLoops'),
     name: 'Conditionals and Loops'
   },
   {
     path: 'form-bindings',
-    component: Basic.FormBindings,
+    component: LazyImport('FormBindings'),
     name: 'Form Bindings'
   },
   {
     path: 'simple-component',
-    component: Basic.SimpleComponent,
+    component: () => import('@/components/Tutorial/Basic/SimpleComponent/SimpleComponent.vue'),
     name: 'Simple Component'
   }
 ].map(route => ({
